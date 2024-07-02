@@ -3,15 +3,20 @@
     <head>
         <title>Count</title>
         <script>
-            function hello() {
-                const header = document.querySelector('h1');
-                if (header.innerHTML === 'Hello!') {
-                    header.innerHTML = 'Goodbye!';
-                }
-                else {
-                    header.innerHTML = 'Hello!';
+            let counter = 0;
+
+            function count() {
+                counter++;
+                document.querySelector('h1').innerHTML = counter;
+
+                if (counter % 10 === 0) {
+                    alert(`Count is now ${counter}`)
                 }
             }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('button').onclick = count;
+            });
         </script>
     </head>
     <body>
