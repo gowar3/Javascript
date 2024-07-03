@@ -11,7 +11,7 @@
 
                 document.querySelector('#task').onkeyup = () => {
 
-                    if (document.querySelector('#task').value > 0){
+                    if (document.querySelector('#task').value.length > 0){
                         document.querySelector('#submit').disabled = false;
                     } else {
                         document.querySelector('#submit').disabled = true;
