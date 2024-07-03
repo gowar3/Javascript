@@ -9,6 +9,11 @@
                     const task= document.querySelector('#task').value;
                     console.log(tasks);
 
+                    const li = document.createElement('li');
+                    li.innerHTML = task;
+
+                    document.querySelector('#tasks').append('li');
+
                     //Stop form from submitting
 
                     return false;
