@@ -1,4 +1,4 @@
-if(!loclStorage.getItem('counter')){
+if(!localStorage.getItem('counter')){
 
     localStorage.setItem('counter', 0);
 }
@@ -19,6 +19,8 @@ function count() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    document.querySelector('h1').innerHTML = localStorage.getItem('counter');
     document.querySelector('button').onclick = count;
 
 });
