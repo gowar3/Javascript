@@ -12,5 +12,5 @@ function count() {
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('button').onclick = count;
 
-    setInterval(count, 1000)
+    setInterval(count, 1000);
 });
