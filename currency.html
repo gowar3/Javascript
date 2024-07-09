@@ -9,10 +9,12 @@
                 fetch('https://api.exchangeratesapi.io/latest?base=USD')
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data);
-                    const rate = data.rates.EUR;
+                    const currency = document.querySelector('#currency').value;
+                    const rate = data.rates.currency;
                     document.querySelector('body').innerHTML = `1 USD is equal to ${rate.toFixed(3)} EUR.`;
                 });
+
+                return false;
             });
         </script>
     </head>
