@@ -21,6 +21,10 @@
                     else {
                         document.QuerySelector('#currency').innerHTML = `Invalid Currency`;
                     }
+                })
+
+                .catch(error => {
+                    console.log('Error', error);
                 });
 
                 return false;
